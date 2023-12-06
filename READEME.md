@@ -1,1 +1,1 @@
-Submoduleのおさらいs
+Submoduleのおさらいです。
