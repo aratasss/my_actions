@@ -4,14 +4,6 @@ on:
     types:
       - opened
       - synchronize
-    branches:
-      - develop
-      - release
-      - main
-    paths:
-      - "*"
-      - src/**
-      - "!**.md"
 jobs:
   test:
     runs-on: ubuntu-latest
