@@ -22,3 +22,5 @@ jobs:
         run: pwd
       - name: show all branches after checkout
         run: git branch -a
+      - name: check git tracking
+        run: git status
