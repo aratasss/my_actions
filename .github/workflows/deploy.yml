@@ -20,9 +20,9 @@ jobs:
           # 必要なモノだけ取ってくる
           sparse-checkout: |
             .github
-      - name: deploy
+      - name: Check requirement
         shell: pwsh
         run: |
-          ls
-          .github\scripts\deploy.ps1 ${{ github.event.inputs.PJ }} |
-
+          Get-Location
+          Get-ChildItem
+          .github\scripts\deploy.ps1 ${{ github.event.inputs.PJ }}
