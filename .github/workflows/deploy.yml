@@ -22,4 +22,7 @@ jobs:
             .github
       - name: deploy
         shell: pwsh
-        run: $env:GITHUB_WORKSPACE\.github\scripts\deploy.ps1 ${{ github.event.inputs.PJ }}
+        run: |
+          ls
+          .github\scripts\deploy.ps1 ${{ github.event.inputs.PJ }} |
+
