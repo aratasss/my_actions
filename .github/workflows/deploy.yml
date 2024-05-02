@@ -23,6 +23,6 @@ jobs:
       - name: Check requirement
         shell: pwsh
         run: |
-          Get-Location
-          Get-ChildItem
+          Get-Location | Write-Output
+          Get-ChildItem | Write-Output
           .github\scripts\deploy.ps1 ${{ github.event.inputs.PJ }}
