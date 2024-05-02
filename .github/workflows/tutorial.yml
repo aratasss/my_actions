@@ -15,8 +15,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           # 必要なモノだけ取ってくる
-          sparse-checkout: |
-            .github
+          sparse-checkout: .github
       - name: Inspect files after checkout
         run: ls -la
       - name: show current directory after checkout
