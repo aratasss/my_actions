@@ -25,4 +25,4 @@ jobs:
         run: |
           Get-Location | Write-Output
           Get-ChildItem | Write-Output
-          .github\scripts\deploy.ps1 ${{ github.event.inputs.PJ }}
+          ${$GITHUB_WORKSPACE}\.github\scripts\deploy.ps1 ${{ github.event.inputs.PJ }}
