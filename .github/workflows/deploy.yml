@@ -1,0 +1,25 @@
+name: Deploy using PowerShell on Ubuntu
+on:
+  workflow_dispatch:
+    inputs:
+      PJ:
+        description: 'PJ'
+        required: true
+        type: choice
+        options:
+          - hoge
+          - piyo
+          - fuga
+jobs:
+  deploy:
+    # github actions上で動かす
+    runs-on: [self-hosted, CD]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # 必要なモノだけ取ってくる
+          sparse-checkout: |
+            .github
+      - name: deploy
+        shell: pwsh
+        run: $env:GITHUB_WORKSPACE\.github\scripts\test.ps1 ${{ github.event.inputs.PJ }}
