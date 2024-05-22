@@ -12,7 +12,7 @@ jobs:
       - name: Change directory 
         run: cd ./Kanikama 
       - name: show files
-      - run: ls -la
+        run: ls -la
       - name: Checkout
         uses: actions/checkout@v4
         with:
