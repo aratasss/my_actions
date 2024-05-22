@@ -18,8 +18,8 @@ jobs:
           sparse-checkout: .github
       - name: Inspect files after checkout
         run: |
-             cd Kanikama
-             ls -la
+            cd Kanikama
+            ls -la
       - name: show all branches after checkout
         run: git branch -a
       - name: check git tracking
