@@ -9,11 +9,10 @@ jobs:
         run: lsb_release -a
       - name: Make test dir Kanikama
         run: mkdir Kanikama
-      - name: Change directory 
-        run: cd ./Kanikama 
       - name: show files
         run: ls -la
       - name: Checkout
+        run: cd Kanikama 
         uses: actions/checkout@v4
         with:
           sparse-checkout: .github
