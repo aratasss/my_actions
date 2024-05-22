@@ -1,4 +1,4 @@
-name: Deploy using PowerShell on Ubuntu
+name: Deploy Action
 on:
   workflow_dispatch:
     inputs:
@@ -12,12 +12,10 @@ on:
           - fuga
 jobs:
   deploy:
-    # github actions上で動かす
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          # 必要なモノだけ取ってくる
           sparse-checkout: |
             .github
       - name: Check requirement
